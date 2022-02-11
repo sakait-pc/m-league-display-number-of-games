@@ -1,0 +1,22 @@
+{
+  "name": "Mリーグ試合数表示",
+  "version": "1.0",
+  "description": "Mリーグ公式サイトのランキングに試合数を表示する拡張機能です。",
+  "action": {
+    "default_icon": {
+      "32": "icon.png"
+    }
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://m-league.jp/stats/"
+  ],
+  "content_scripts": [{
+    "run_at": "document_end",
+    "matches": ["https://m-league.jp/"],
+    "js": ["content.js"]
+  }],
+  "manifest_version": 3
+}
