@@ -27,6 +27,8 @@ window.addEventListener('load', async () => {
       T006: {name: '雷電', games: 0},
       T007: {name: 'Pirates', games: 0},
     };
+    // from 2022-2023 season
+    const regularSeasonGames = 94;
     Object.keys(team).forEach(id => {
       const sectionElement = statsDocument.getElementById(id);
       const tdElements = sectionElement.querySelectorAll('.p-stats__table tr:nth-child(2) td');
@@ -36,7 +38,7 @@ window.addEventListener('load', async () => {
     Array.prototype.forEach.call(teamNameElements, element => {
       const teamName = element.textContent;
       const {games} = Object.values(team).find(t => t.name === teamName);
-      element.innerText = `${teamName}\n(${games} /90)`;
+      element.innerText = `${teamName}\n(${games} /${regularSeasonGames})`;
     });
   } catch (e) {
     alert('Chrome拡張機能 Mリーグ試合数表示\nデータの取得に失敗しました。しばらくしてから再度お試しください。');
