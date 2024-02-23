@@ -25,10 +25,11 @@ window.addEventListener('load', async () => {
       T004: {name: 'ABEMAS', games: 0},
       T005: {name: 'フェニックス', games: 0},
       T006: {name: '雷電', games: 0},
+      T010: {name: 'BEAST', games: 0},
       T007: {name: 'Pirates', games: 0},
     };
-    // from 2022-2023 season
-    const regularSeasonGames = 94;
+    // from 2023-2024 season
+    const regularSeasonGames = 96;
     Object.keys(team).forEach(id => {
       const sectionElement = statsDocument.getElementById(id);
       const tdElements = sectionElement.querySelectorAll('.p-stats__table tr:nth-child(2) td');
