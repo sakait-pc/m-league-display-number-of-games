@@ -1,6 +1,6 @@
 {
   "name": "Mリーグ試合数表示",
-  "version": "1.2",
+  "version": "1.2.1",
   "description": "Mリーグ公式サイトのランキングに試合数を表示する拡張機能です。",
   "action": {
     "default_icon": {
